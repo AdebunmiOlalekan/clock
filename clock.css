@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;
+}
+
+.clock {
+    width: 350px;
+    height: 350px;
+    border: 9px solid blueviolet;
+    border-radius: 50%;
+    position: relative;
+    background: black;
+    box-shadow: 60px 50px 50px rgba(16, 19, 5, 0.3);
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(0deg);
+    border-radius: 10px;
+}
+
+.hour {
+    width: 8px;
+    height: 90px;
+    background: yellow;
+}
+
+.minute {
+    width: 5px;
+    height: 120px;
+    background: blue;
+}
+
+.second {
+    width: 2px;
+    height: 140px;
+    background: red;
+}
+
+.center {
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.number {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: wheat;
+  
+
+}
+.number12 {
+    top: 10px;
+    left: 50%;
+    /* transform-origin: center 165px; */
+    /* animation: spin 60s linear infinite; */
+}
+
+@keyframes spin {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+        color: red;
+    }
+     15% {
+        color: yellow;
+    }
+
+    20% {
+        color: blue;
+    }
+
+    25% {
+        transform: translateX(-50%) rotate(180deg);
+        color: lime;
+    }
+
+    75% {
+        color: cyan;
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+        color: magenta;
+    }
+}
+
+
+.number1 {
+    top: 30px;
+    right: 80px;
+
+}
+
+.number2 {
+    top: 80px;
+    right: 30px;
+}
+
+.number3 {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.number4 {
+    bottom: 80px;
+    right: 30px;
+}
+
+.number5 {
+    bottom: 30px;
+    right: 80px;
+}
+
+.number6 {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.number7 {
+    bottom: 30px;
+    left: 80px;
+}
+
+.number8 {
+    bottom: 80px;
+    left: 30px;
+}
+
+.number9 {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.number10 {
+    top: 80px;
+    left: 30px;
+}
+
+.number11 {
+    top: 30px;
+    left: 80px;
+}
