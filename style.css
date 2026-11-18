@@ -1,0 +1,442 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: red;
+}
+
+.clock {
+    width: 350px;
+    height: 350px;
+    border: 9px solid blueviolet;
+    border-radius: 50%;
+    position: relative;
+    background: black;
+    box-shadow: 60px 50px 50px rgba(16, 19, 5, 0.3);
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(0deg);
+    border-radius: 10px;
+}
+
+.hour {
+    width: 8px;
+    height: 90px;
+    background: yellow;
+}
+
+.minute {
+    width: 5px;
+    height: 120px;
+    background: blue;
+}
+
+.second {
+    width: 2px;
+    height: 140px;
+    background: red;
+}
+
+.center {
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.number {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: wheat;
+  
+
+}
+.number12 {
+    top: 10px;
+    left: 50%;
+   
+}
+
+@keyframes spin {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+        color: red;
+    }
+     15% {
+        color: yellow;
+    }
+
+    20% {
+        color: blue;
+    }
+
+    25% {
+        transform: translateX(-50%) rotate(180deg);
+        color: lime;
+    }
+
+    75% {
+        color: cyan;
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+        color: magenta;
+    }
+}
+
+
+.number1 {
+    top: 30px;
+    right: 80px;
+
+}
+
+.number2 {
+    top: 80px;
+    right: 30px;
+}
+
+.number3 {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.number4 {
+    bottom: 80px;
+    right: 30px;
+}
+
+.number5 {
+    bottom: 30px;
+    right: 80px;
+}
+
+.number6 {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.number7 {
+    bottom: 30px;
+    left: 80px;
+}
+
+.number8 {
+    bottom: 80px;
+    left: 30px;
+}
+
+.number9 {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.number10 {
+    top: 80px;
+    left: 30px;
+}
+
+.number11 {
+    top: 30px;
+    left: 80px;
+} */
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: white;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* CLOCK */
+.clock {
+    width: clamp(250px, 75vw, 350px);
+    aspect-ratio: 1 / 1;
+    border: clamp(6px, 2vw, 9px) solid blueviolet;
+    border-radius: 50%;
+    position: relative;
+    background: black;
+    box-shadow: 20px 25px 40px rgba(16, 19, 5, 0.3);
+    flex-shrink: 0;
+}
+
+/* CLOCK HANDS */
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translateX(-50%) rotate(0deg);
+    border-radius: 10px;
+}
+
+/* HOUR HAND */
+.hour {
+    width: 8px;
+    height: 26%;
+    background: yellow;
+}
+
+/* MINUTE HAND */
+.minute {
+    width: 5px;
+    height: 35%;
+    background: blue;
+}
+
+/* SECOND HAND */
+.second {
+    width: 2px;
+    height: 41%;
+    background: red;
+}
+
+/* CENTER */
+.center {
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+/* CLOCK NUMBERS */
+.number {
+    position: absolute;
+    font-size: clamp(17px, 5vw, 24px);
+    font-weight: bold;
+    color: wheat;
+}
+
+/* NUMBER POSITIONS */
+.number12 {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.number1 {
+    top: 9%;
+    right: 23%;
+}
+
+.number2 {
+    top: 23%;
+    right: 9%;
+}
+
+.number3 {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.number4 {
+    bottom: 23%;
+    right: 9%;
+}
+
+.number5 {
+    bottom: 9%;
+    right: 23%;
+}
+
+.number6 {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.number7 {
+    bottom: 9%;
+    left: 23%;
+}
+
+.number8 {
+    bottom: 23%;
+    left: 9%;
+}
+
+.number9 {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.number10 {
+    top: 23%;
+    left: 9%;
+}
+
+.number11 {
+    top: 9%;
+    left: 23%;
+}
+
+/* ANIMATION */
+@keyframes spin {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+        color: red;
+    }
+
+    15% {
+        color: yellow;
+    }
+
+    20% {
+        color: blue;
+    }
+
+    25% {
+        transform: translateX(-50%) rotate(180deg);
+        color: lime;
+    }
+
+    75% {
+        color: cyan;
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+        color: magenta;
+    }
+}
+
+/* TABLETS */
+@media screen and (max-width: 768px) {
+
+    .clock {
+        width: min(70vw, 320px);
+    }
+
+    .hour {
+        width: 7px;
+    }
+
+    .minute {
+        width: 4px;
+    }
+
+    .second {
+        width: 2px;
+    }
+
+    .center {
+        width: 15px;
+        height: 15px;
+    }
+
+    .number {
+        font-size: 21px;
+    }
+}
+
+/* MOBILE PHONES */
+@media screen and (max-width: 480px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .clock {
+        width: min(85vw, 300px);
+        border-width: 6px;
+    }
+
+    .hour {
+        width: 6px;
+        height: 25%;
+    }
+
+    .minute {
+        width: 4px;
+        height: 34%;
+    }
+
+    .second {
+        width: 2px;
+        height: 40%;
+    }
+
+    .center {
+        width: 13px;
+        height: 13px;
+    }
+
+    .number {
+        font-size: 19px;
+    }
+
+    .number12 {
+        top: 8px;
+    }
+
+    .number3 {
+        right: 8px;
+    }
+
+    .number6 {
+        bottom: 8px;
+    }
+
+    .number9 {
+        left: 8px;
+    }
+}
+
+/* VERY SMALL PHONES */
+@media screen and (max-width: 320px) {
+
+    .clock {
+        width: 90vw;
+    }
+
+    .number {
+        font-size: 16px;
+    }
+
+    .center {
+        width: 11px;
+        height: 11px;
+    }
+}
