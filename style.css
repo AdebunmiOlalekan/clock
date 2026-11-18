@@ -171,7 +171,7 @@ body {
     box-sizing: border-box;
 }
 
-/* BODY */
+
 body {
     display: flex;
     justify-content: center;
@@ -183,7 +183,6 @@ body {
     overflow-x: hidden;
 }
 
-/* CLOCK */
 .clock {
     width: clamp(250px, 75vw, 350px);
     aspect-ratio: 1 / 1;
@@ -195,7 +194,7 @@ body {
     flex-shrink: 0;
 }
 
-/* CLOCK HANDS */
+
 .hand {
     position: absolute;
     bottom: 50%;
@@ -205,28 +204,26 @@ body {
     border-radius: 10px;
 }
 
-/* HOUR HAND */
+
 .hour {
     width: 8px;
     height: 26%;
     background: yellow;
 }
 
-/* MINUTE HAND */
 .minute {
     width: 5px;
     height: 35%;
     background: blue;
 }
 
-/* SECOND HAND */
+
 .second {
     width: 2px;
     height: 41%;
     background: red;
 }
 
-/* CENTER */
 .center {
     width: 18px;
     height: 18px;
@@ -239,7 +236,7 @@ body {
     z-index: 5;
 }
 
-/* CLOCK NUMBERS */
+
 .number {
     position: absolute;
     font-size: clamp(17px, 5vw, 24px);
@@ -312,7 +309,6 @@ body {
     left: 23%;
 }
 
-/* ANIMATION */
 @keyframes spin {
     0% {
         transform: translateX(-50%) rotate(0deg);
@@ -371,7 +367,7 @@ body {
     }
 }
 
-/* MOBILE PHONES */
+
 @media screen and (max-width: 480px) {
 
     body {
@@ -424,7 +420,7 @@ body {
     }
 }
 
-/* VERY SMALL PHONES */
+
 @media screen and (max-width: 320px) {
 
     .clock {
